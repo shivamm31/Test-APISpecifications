@@ -1,0 +1,53 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "description": "Global QA EBS Investments API",
+    "title": "GLQA EBS Investments API",
+    "version": ""
+  },
+  "servers": [
+    {
+      "url": "https:://api-qa.amwayglobal.com/"
+    }
+  ],
+  "paths": {
+    "rest/ebs/v1/Investments": {
+      "post": {
+        "parameters": [
+          {
+            "description": "API Key",
+            "in": "header",
+            "name": "api_key",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "description": "Content type of the payload",
+            "in": "header",
+            "name": "Content-Type",
+            "schema": {
+              "default": "application/json",
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "textarea"
+              }
+            }
+          },
+          "description": "Well-formed JSON"
+        }
+      }
+    }
+  }
+}
